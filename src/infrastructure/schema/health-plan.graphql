@@ -1,0 +1,7 @@
+type HealthPlan {
+    id: ID
+    descricao: String
+    dataCriacao: String
+    dataAtualizacao: String
+    status: String
+}

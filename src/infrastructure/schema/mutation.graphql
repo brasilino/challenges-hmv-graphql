@@ -1,0 +1,5 @@
+#import HealthPlan from 'health-plan.graphql'
+
+type Mutation {
+    register(description: String): HealthPlan
+} 
