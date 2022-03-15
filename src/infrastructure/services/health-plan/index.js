@@ -1,12 +1,13 @@
-const axios = require('axios')
-
 class HealthPlanService {
-    constructor() {}
+    constructor(api, host) {
+        this.api = api
+        this.url = host+'convenios'
+    }
 
     async register(description) {
         try {
 
-            const { data } = await axios.post('http://localhost:8080/api/convenios', 
+            const { data } = await this.api.post(this.url, 
                 { 
                     descricao: description,
                 },

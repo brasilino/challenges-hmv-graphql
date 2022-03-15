@@ -1,7 +1,10 @@
 const HealthPlanService = require('../../../services/health-plan')
+const axios = require('axios')
+const config = require('../../../../config')
 
 const register = async (description) => {
-    const service = new HealthPlanService()
+    const { host } = config
+    const service = new HealthPlanService(axios, host)
     const result = await service.register(description)
     return result
 }

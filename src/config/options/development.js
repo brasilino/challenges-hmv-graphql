@@ -1,4 +1,5 @@
 module.exports = {
+    host: 'http://localhost:8080/api/',
     db: {
         client: '',
         connection: {
