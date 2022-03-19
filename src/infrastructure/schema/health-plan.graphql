@@ -1,7 +1,19 @@
-type HealthPlan {
+type Register {
     id: ID
     descricao: String
     dataCriacao: String
     dataAtualizacao: String
     status: String
+}
+
+type Content {
+    id: ID
+    descricao: String
+    dataCriacao: String
+    dataAtualizacao: String
+    status: String
+}
+
+type FindAll {
+    content: [Content]
 }

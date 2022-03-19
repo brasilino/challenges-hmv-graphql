@@ -25,6 +25,20 @@ class HealthPlanService {
             console.log('ERRO:', err)
         }
     }
+
+    async findAll() {
+        try {
+
+            const { data } = await this.api.get(this.url)
+
+            console.log('findAll:', data)
+
+            return data
+        }
+        catch(err) {
+            console.log('ERRO:', err)
+        }
+    }
 }
 
 module.exports = HealthPlanService
