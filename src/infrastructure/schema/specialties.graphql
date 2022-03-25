@@ -5,3 +5,15 @@ type RegisterSpecialties {
     dataAtualizacao: String
     status: String
 }
+
+type Content {
+    id: ID
+    nome: String
+    dataCriacao: String
+    dataAtualizacao: String
+    status: String
+}
+
+type FindAllSpecialties {
+    content: [Content]
+}

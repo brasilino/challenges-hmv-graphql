@@ -25,6 +25,18 @@ class SpecialtiesService {
             console.log('ERRO:', err)
         }
     }
+
+    async findAll() {
+        try {
+
+            const { data } = await this.api.get(this.url)
+
+            return data
+        }
+        catch(err) {
+            console.log('ERRO:', err)
+        }
+    }
 }
 
 module.exports = SpecialtiesService
