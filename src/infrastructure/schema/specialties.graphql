@@ -17,3 +17,7 @@ type Content {
 type FindAllSpecialties {
     content: [Content]
 }
+
+type DeleteSpecialtie {
+    status: Boolean
+}

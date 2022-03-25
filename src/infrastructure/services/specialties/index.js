@@ -37,6 +37,18 @@ class SpecialtiesService {
             console.log('ERRO:', err)
         }
     }
+
+    async delete(id) {
+        try {
+
+            const { data } = await this.api.delete(this.url+'/'+id)
+
+            return {status: true}
+        }
+        catch(err) {
+            console.log('ERRO:', err)
+        }
+    }
 }
 
 module.exports = SpecialtiesService
