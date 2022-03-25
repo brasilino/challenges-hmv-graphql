@@ -1,5 +1,6 @@
-#import Register from 'health-plan.graphql'
+#import Register, Delete from 'health-plan.graphql'
 
 type Mutation {
     register(description: String): Register
+    deleteHealthPlan(id: ID): Delete
 } 

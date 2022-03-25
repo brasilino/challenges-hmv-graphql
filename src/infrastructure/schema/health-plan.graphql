@@ -17,3 +17,7 @@ type Content {
 type FindAll {
     content: [Content]
 }
+
+type Delete {
+    status: Boolean
+}

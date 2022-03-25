@@ -1,5 +1,5 @@
 const login = require('./queries/login')
-const register = require('./mutations/health-plan')
+const healthPlanMutations = require('./mutations/health-plan')
 const findAllHealthPlans = require('./queries/health-plan')
 
     
@@ -9,6 +9,6 @@ module.exports = {
         ...findAllHealthPlans
     },
     Mutation: {
-        ...register
+        ...healthPlanMutations
     }
 }
