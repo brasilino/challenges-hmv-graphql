@@ -1,0 +1,7 @@
+type RegisterSpecialties {
+    id: ID
+    nome: String
+    dataCriacao: String
+    dataAtualizacao: String
+    status: String
+}
