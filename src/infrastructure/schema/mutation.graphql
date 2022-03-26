@@ -1,9 +1,20 @@
 #import Register, Delete from 'health-plan.graphql'
 #import RegisterSpecialties, DeleteSpecialtie from 'specialties.graphql'
+#import HospitalRegister from 'hospital.graphql'
 
 type Mutation {
     register(description: String): Register
     deleteHealthPlan(id: ID): Delete
     registerSpecialties(name: String): RegisterSpecialties
     deleteSpecialtie(id: ID): DeleteSpecialtie
+    hospitalRegister(
+        name: String
+        description: String
+        publicPlace: String
+        number: String
+        complement: String
+        city: String
+        uf: String
+        zipCode: String
+    ): HospitalRegister
 } 

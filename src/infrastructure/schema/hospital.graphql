@@ -1,0 +1,24 @@
+type Address {
+    descricao: String
+    logradouro: String
+    numero: Int
+    complemento: String
+    cidade: String
+    uf: String
+    cep: Int
+    codigo_endereco: String
+}
+
+type Specialties {
+    test: String
+}
+
+type HospitalRegister {
+    endereco: Address
+    especialidades: [Specialties!]
+    dataCriacao: String
+    dataAtualizacao: String
+    codigo_unidade: String
+    nome_unidade: String
+    status: String
+}

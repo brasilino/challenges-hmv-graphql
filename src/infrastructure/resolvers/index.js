@@ -3,6 +3,7 @@ const healthPlanMutations = require('./mutations/health-plan')
 const findAllHealthPlans = require('./queries/health-plan')
 const specialtiesMutations = require('./mutations/specialties')
 const findAllSpecialties = require('./queries/specialties')
+const hospitalMutations = require('./mutations/hospital')
 
     
 module.exports = {
@@ -13,6 +14,7 @@ module.exports = {
     },
     Mutation: {
         ...healthPlanMutations,
-        ...specialtiesMutations
+        ...specialtiesMutations,
+        ...hospitalMutations
     }
 }
