@@ -6,6 +6,50 @@ type Content {
     status: String
 }
 
+type Dores {
+    regiao: String
+    escala_de_dor: String
+}
+
+type Sintomas  {
+    id: Int
+    descricao: String
+}
+
+type HabitosPaciente {
+    id: Int
+    descricao: String
+}
+
+type EventosTraumaticos {
+    id: Int
+    descricao: String
+}
+
+type DetalhesPedidoAtendimento {
+    dores: [Dores]
+    sintomas: [Sintomas]
+    data_nascimento: String
+    relato_motivo_pedido_atendimento: String
+    habitos_paciente: [HabitosPaciente]
+    eventos_traumaticos: [EventosTraumaticos]
+}
+
+type ContentEmergency {
+    codigo_emergencia: String
+    id_paciente: String
+    primeiro_nome_paciente: String
+    score_prioridade: Int
+    status: String
+    detalhes_pedido_atendimento: DetalhesPedidoAtendimento
+    data_criacao: String
+    data_atualizacao: String
+}
+
 type FindAllByStatusEmergency {
     content: [Content]
+}
+
+type FindById {
+    content: ContentEmergency
 }
