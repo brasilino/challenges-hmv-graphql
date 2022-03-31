@@ -1,0 +1,11 @@
+type Content {
+    codigo_emergencia: String
+    id_paciente: String
+    primeiro_nome_paciente: String
+    score_prioridade: Int
+    status: String
+}
+
+type FindAllByStatusEmergency {
+    content: [Content]
+}

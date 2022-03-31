@@ -1,9 +1,11 @@
 #import User from 'user.graphql'
 #import FindAll from 'health-plan.graphql'
 #import FindAllSpecialties from 'specialties.graphql'
+#import FindAllByStatusEmergency from 'emergencies.graphql'
 
 type Query {
     login(user: String, password: String): User
     findAllHealthPlans: FindAll
     findAllSpecialties: FindAllSpecialties
+    findAllByStatusEmergency: FindAllByStatusEmergency
 }

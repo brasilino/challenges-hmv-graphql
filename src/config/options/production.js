@@ -1,5 +1,5 @@
 module.exports = {
-    host: 'http://localhost:8080/api/',
+    host: 'http://Servi-ALB01-1VD5W3BIU2PCZ-422654258.us-east-1.elb.amazonaws.com:8080/api/',
     db: {
         client: '',
         connection: {
