@@ -1,7 +1,7 @@
 class SpecialtiesService {
     constructor(api, host) {
         this.api = api
-        this.url = host+'especialidades'
+        this.url = host+'api/especialidades'
     }
 
     async register(name) {

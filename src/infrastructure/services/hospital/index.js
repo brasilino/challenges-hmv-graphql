@@ -1,7 +1,7 @@
 class HospitalService {
     constructor(api, host) {
         this.api = api
-        this.url = host+'hospitais'
+        this.url = host+'api/hospitais'
     }
 
     async register(hospital) {

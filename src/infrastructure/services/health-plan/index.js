@@ -1,7 +1,7 @@
 class HealthPlanService {
     constructor(api, host) {
         this.api = api
-        this.url = host+'convenios'
+        this.url = host+'api/convenios'
     }
 
     async register(description) {

@@ -1,7 +1,7 @@
 class EmergenciesService {
     constructor(api, host) {
         this.api = api
-        this.url = host+'emergencias'
+        this.url = host+'api/emergencias'
     }
 
     async findAllByStatusEmergency() {

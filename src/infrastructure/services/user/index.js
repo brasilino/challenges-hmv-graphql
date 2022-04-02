@@ -3,32 +3,41 @@ const stringify = require('querystring');
 class UserService {
     constructor(api, host) {
         this.api = api
-        this.url = 'http://Servi-ALB01-1VD5W3BIU2PCZ-422654258.us-east-1.elb.amazonaws.com:8080/oauth/token'
+        this.url = host+'oauth/token'
     }
 
-    async login(username, password) {
+    prepareParams(username, password) {
+        const params = new URLSearchParams();
+        params.append('username', username);
+        params.append('password', password);
+        params.append('grant_type', 'password');
+
+        return params
+    }
+
+    prepareConfig() {
         const auth = {
             username: 'hmv-clients-tango1010',
             password: 'hmv-client-secret-tango2020',
         }
-
         const encodedSecret = Buffer.from(`${auth.username}:${auth.password}`).toString('base64')
 
-        try {
-            const { data } = await this.api.post(this.url, 
-                {
-                    username: 'tangomaster1010@hmv-master.com.br',
-                    password: 'tenhoMundialF1fa',
-                    grant_type: 'password'
-                },
-                {
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                        Authorization: 'Basic ' + encodedSecret
-                    }
-                })
+        const config = {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                Authorization: 'Basic ' + encodedSecret
+            },
+        }
 
-            console.log('data:', data)
+        return config
+    }
+
+    async login(username, password) {
+        const params = this.prepareParams(username, password)
+        const config = this.prepareConfig()
+
+        try {
+            const { data } = await this.api.post(this.url, params, config)
 
             return data
         }
