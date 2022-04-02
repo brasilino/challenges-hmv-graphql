@@ -1,16 +1,16 @@
 type RegisterSpecialties {
     id: ID
     nome: String
-    dataCriacao: String
-    dataAtualizacao: String
+    data_criacao: String
+    data_atualizacao: String
     status: String
 }
 
 type Content {
     id: ID
     nome: String
-    dataCriacao: String
-    dataAtualizacao: String
+    data_criacao: String
+    data_atualizacao: String
     status: String
 }
 

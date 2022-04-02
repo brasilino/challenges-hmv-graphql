@@ -16,8 +16,8 @@ type Specialties {
 type HospitalRegister {
     endereco: Address
     especialidades: [Specialties!]
-    dataCriacao: String
-    dataAtualizacao: String
+    data_criacao: String
+    data_atualizacao: String
     codigo_unidade: String
     nome_unidade: String
     status: String

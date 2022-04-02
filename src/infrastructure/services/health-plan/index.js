@@ -16,8 +16,8 @@ class HealthPlanService {
             return {
                 id: data.id,
                 descricao: data.descricao,
-                dataCriacao: data.dataCriacao,
-                dataAtualizacao: data.dataAtualizacao,
+                data_criacao: data.data_criacao,
+                data_atualizacao: data.data_atualizacao,
                 status: data.status
             }
         }
