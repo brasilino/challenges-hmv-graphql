@@ -1,6 +1,7 @@
 #import Register, Delete from 'health-plan.graphql'
 #import RegisterSpecialties, DeleteSpecialtie from 'specialties.graphql'
 #import HospitalRegister from 'hospital.graphql'
+#import User from 'user.graphql'
 
 type Mutation {
     register(description: String): Register
@@ -17,4 +18,5 @@ type Mutation {
         uf: String
         zipCode: String
     ): HospitalRegister
+    login(username: String, password: String): User
 } 

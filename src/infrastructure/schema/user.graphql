@@ -1,5 +1,5 @@
 type User {
-    Name: String
-    Token: String
+    access_token: String
+    funcionario: Boolean
+    primeiro_nome: String
 }
-

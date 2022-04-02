@@ -1,4 +1,4 @@
-const login = require('./queries/login')
+const userMutations = require('./mutations/user')
 const healthPlanMutations = require('./mutations/health-plan')
 const findAllHealthPlans = require('./queries/health-plan')
 const specialtiesMutations = require('./mutations/specialties')
@@ -9,12 +9,12 @@ const findAllByStatusEmergency = require('./queries/emergencies')
     
 module.exports = {
     Query: {
-        ...login,
         ...findAllHealthPlans,
         ...findAllSpecialties,
         ...findAllByStatusEmergency
     },
     Mutation: {
+        ...userMutations,
         ...healthPlanMutations,
         ...specialtiesMutations,
         ...hospitalMutations
